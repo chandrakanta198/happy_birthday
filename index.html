@@ -106,9 +106,42 @@ background-position: center; /* Center the image */
     height: 100%;
     transform: scaleX(-1);
 }
+button {
+    color: #9612eb;
+    box-shadow: 1px 2px 5px #9612eb;
+    background: #fff;
+    border: 1px solid #9612eb;
+    border-radius: 5px;
+    padding: 10px;
+}
+button:hover{
+    color: #fff;
+    background:transparent;
+ box-shadow: 1px 2px 5px #fff;
+    border: 1px solid #fff;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
 </style>
+<script>
+
+  function playAudio() {
+    var audio = document.getElementById('myAudio');
+    audio.play();
+  }
+</script>
 </head>
 <body>
+
+<audio id="myAudio" autoplay controls loop style="display: none;">
+  <source src="birthday.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <div class="card">
   <div class="back"><img width="100%" src="neelam.png"></div>
   <div class="front">
@@ -124,5 +157,7 @@ background-position: center; /* Center the image */
 </div>
   
 </div>
+<div class="button">
+<button onclick="playAudio()">Play Audio</button></div>
 </body>
 </html>
